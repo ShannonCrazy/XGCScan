@@ -1,0 +1,6 @@
+framework module XGCMain {
+  umbrella header "XGCMain-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,13 +1,13 @@
 use_frameworks!
+inhibit_all_warnings!
 
-platform :ios, '10.0'
+
+platform :ios, '12.0'
 
 target 'XGCScan_Example' do
   pod 'XGCScan', :path => '../'
 
   target 'XGCScan_Tests' do
     inherit! :search_paths
-
-    pod 'FBSnapshotTestCase'
   end
 end

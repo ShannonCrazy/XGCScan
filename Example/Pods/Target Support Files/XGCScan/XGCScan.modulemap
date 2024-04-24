@@ -1,0 +1,6 @@
+framework module XGCScan {
+  umbrella header "XGCScan-umbrella.h"
+
+  export *
+  module * { export * }
+}
