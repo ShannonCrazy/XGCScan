@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (XGCColor)
 /// 随机色
-@property (class, nonatomic, readonly) UIColor *randomColor;
+@property (class, nonatomic, readonly) UIColor *arc4randomColor;
 /// 获取颜色
 + (UIColor *)xgc_colorNamed:(NSString *)name;
 @end

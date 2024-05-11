@@ -9,11 +9,16 @@
 // category
 #import "XGCConfiguration.h"
 
-@interface XGCMainViewController ()
-
-@end
-
 @implementation XGCMainViewController
+
+- (struct XGCMainViewConfiguration)configuration {
+    struct XGCMainViewConfiguration configuration;
+    configuration.prefersNavigationBarShadowColor = XGCCMI.navBarShadowColor;
+    configuration.prefersNavigationBarBackgroundColor = XGCCMI.navBarBackgroundColor;
+    configuration.prefersNavigationBarHidden = false;
+    configuration.interactivePopGestureDisable = false;
+    return configuration;
+}
 
 - (instancetype)initWithCoder:(NSCoder *)coder {
     if (self = [super initWithCoder:coder]) {
@@ -48,15 +53,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 //    [XGCMobClickManager endLogPageView:NSStringFromClass([self class])];
-}
-
-- (struct XGCMainViewConfiguration)configuration {
-    struct XGCMainViewConfiguration configuration;
-    configuration.prefersNavigationBarShadowColor = XGCCMI.navBarShadowColor;
-    configuration.prefersNavigationBarBackgroundColor = XGCCMI.navBarBackgroundColor;
-    configuration.prefersNavigationBarHidden = false;
-    configuration.interactivePopGestureDisable = false;
-    return configuration;
 }
 
 #pragma mark action

@@ -9,7 +9,7 @@
 
 @implementation UIColor (XGCColor)
 
-+ (UIColor *)randomColor {
++ (UIColor *)arc4randomColor {
     return [UIColor colorWithRed:arc4random_uniform(256) / 255.0f green:arc4random_uniform(256) / 255.0f blue:arc4random_uniform(256) / 255.0f alpha:1];
 }
 

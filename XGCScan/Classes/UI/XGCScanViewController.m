@@ -9,13 +9,12 @@
 // XGCMain
 #import <XGCMain/XGCMainRoute.h>
 #import <XGCMain/UIView+XGCView.h>
-#import <XGCMain/UIImage+XGCImage.h>
 // tool
 #import <AVFoundation/AVFoundation.h>
-// controller
-#import "XGCScanInfosViewController.h"
 // thridparty
 #import <Masonry/Masonry.h>
+// controller
+#import "XGCScanInfosViewController.h"
 
 @interface XGCScanViewController ()<AVCaptureMetadataOutputObjectsDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 /// 图片
@@ -60,7 +59,7 @@
     });
     ({
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"scan_return" inResource:@"XGCScan"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"scan_return"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(backButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,7 +84,7 @@
     // 通知
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(captureSessionRuntimeErrorNotification:) name:AVCaptureSessionRuntimeErrorNotification object:nil];
     // 检测权限
-    [self authorizationStatus];
+    [self requestAccessForMediaTypeVideo];
 }
 
 #pragma mark - notification
@@ -107,7 +106,7 @@
 }
 
 #pragma mark func
-- (void)authorizationStatus {
+- (void)requestAccessForMediaTypeVideo {
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (status) {
         case AVAuthorizationStatusRestricted:
@@ -118,13 +117,13 @@
                 [UIApplication.sharedApplication openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
             }]];
             [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                [self.navigationController popViewControllerAnimated:YES];
+                self.navigationController ? [self.navigationController popViewControllerAnimated:YES] : [self dismissViewControllerAnimated:YES completion:nil];
             }]];
             [self presentViewController:alert animated:alert completion:nil];
         } break;
         case AVAuthorizationStatusNotDetermined: {
             [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-                dispatch_async(dispatch_get_main_queue(), ^{ [self authorizationStatus]; });
+                dispatch_async(dispatch_get_main_queue(), ^{ [self requestAccessForMediaTypeVideo]; });
             }];
         } break;
         default: [self initializeCaptureSession];
@@ -198,9 +197,6 @@
     if (stringValue.length == 0) {
         return;
     }
-#if DEBUG
-    NSLog(@"stringValue=%@", stringValue);
-#endif
     __kindof UIViewController *viewController = nil;
     NSURL *URL = [NSURL URLWithString:stringValue];
     if ([XGCMainRoute canRouteURL:URL withParameters:nil]) {

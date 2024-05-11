@@ -39,6 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// - Parameter URL: 需要导航的URL
 + (void)routeURL:(nullable NSURL *)URL;
 + (void)routeURL:(nullable NSURL *)URL withParameters:(nullable NSDictionary <NSString *, id> *)parameters;
++ (void)routeURL:(nullable NSURL *)URL withParameters:(nullable NSDictionary <NSString *, id> *)parameters method:(NSString *)method animated:(BOOL)animated;
 
 /// 获取URL导航的实例，可以传入参数
 /// - Parameter URL: 需要导航的URL

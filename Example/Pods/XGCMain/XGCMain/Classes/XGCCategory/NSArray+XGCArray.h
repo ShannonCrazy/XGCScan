@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSArray<ObjectType> (XGCArray)
 /// 随机获取几个值
 /// - Parameter count: 总共要获取几个值
-- (NSArray <ObjectType> *)random:(NSUInteger)count;
+- (NSArray <ObjectType> *)arc4random:(NSUInteger)count;
 @end
 
 @interface NSMutableArray<ObjectType> (XGCMutableArray)

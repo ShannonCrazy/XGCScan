@@ -24,6 +24,11 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A1A5C4C8EB0AD353DA8C3995 /* Pods_XGCScan_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 722210485FE076EC4D9A7002 /* Pods_XGCScan_Example.framework */; };
+		FB5015222BD8E885001034DD /* XGCSceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5015212BD8E885001034DD /* XGCSceneDelegate.m */; };
+		FBED00762BEF4537005A029D /* XGCScan.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBED006A2BEF4537005A029D /* XGCScan.xcassets */; };
+		FBED00772BEF4537005A029D /* XGCScanRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = FBED006D2BEF4537005A029D /* XGCScanRoute.m */; };
+		FBED00782BEF4537005A029D /* XGCScanInfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBED00702BEF4537005A029D /* XGCScanInfosViewController.m */; };
+		FBED00792BEF4537005A029D /* XGCScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBED00722BEF4537005A029D /* XGCScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,15 @@
 		AC3E17254A351BC28B43EE49 /* Pods-XGCScan_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGCScan_Example.debug.xcconfig"; path = "Target Support Files/Pods-XGCScan_Example/Pods-XGCScan_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C94AB9FFB52D53E8EC5D6D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DBEEE0AAD21911C5FBBDC816 /* Pods-XGCScan_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGCScan_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XGCScan_Tests/Pods-XGCScan_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FB5015202BD8E885001034DD /* XGCSceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGCSceneDelegate.h; sourceTree = "<group>"; };
+		FB5015212BD8E885001034DD /* XGCSceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGCSceneDelegate.m; sourceTree = "<group>"; };
+		FBED006A2BEF4537005A029D /* XGCScan.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = XGCScan.xcassets; sourceTree = "<group>"; };
+		FBED006C2BEF4537005A029D /* XGCScanRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGCScanRoute.h; sourceTree = "<group>"; };
+		FBED006D2BEF4537005A029D /* XGCScanRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGCScanRoute.m; sourceTree = "<group>"; };
+		FBED006F2BEF4537005A029D /* XGCScanInfosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGCScanInfosViewController.h; sourceTree = "<group>"; };
+		FBED00702BEF4537005A029D /* XGCScanInfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGCScanInfosViewController.m; sourceTree = "<group>"; };
+		FBED00712BEF4537005A029D /* XGCScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGCScanViewController.h; sourceTree = "<group>"; };
+		FBED00722BEF4537005A029D /* XGCScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGCScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +146,11 @@
 		6003F593195388D20070C39A /* Example for XGCScan */ = {
 			isa = PBXGroup;
 			children = (
+				FBED00752BEF4537005A029D /* XGCScan */,
 				6003F59C195388D20070C39A /* XGCAppDelegate.h */,
 				6003F59D195388D20070C39A /* XGCAppDelegate.m */,
+				FB5015202BD8E885001034DD /* XGCSceneDelegate.h */,
+				FB5015212BD8E885001034DD /* XGCSceneDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* XGCViewController.h */,
 				6003F5A6195388D20070C39A /* XGCViewController.m */,
@@ -194,6 +211,53 @@
 				1A902F095A1080E87AC07256 /* Pods-XGCScan_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FBED006B2BEF4537005A029D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FBED006A2BEF4537005A029D /* XGCScan.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FBED006E2BEF4537005A029D /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				FBED006C2BEF4537005A029D /* XGCScanRoute.h */,
+				FBED006D2BEF4537005A029D /* XGCScanRoute.m */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		FBED00732BEF4537005A029D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FBED00712BEF4537005A029D /* XGCScanViewController.h */,
+				FBED00722BEF4537005A029D /* XGCScanViewController.m */,
+				FBED006F2BEF4537005A029D /* XGCScanInfosViewController.h */,
+				FBED00702BEF4537005A029D /* XGCScanInfosViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FBED00742BEF4537005A029D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FBED006E2BEF4537005A029D /* Route */,
+				FBED00732BEF4537005A029D /* UI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FBED00752BEF4537005A029D /* XGCScan */ = {
+			isa = PBXGroup;
+			children = (
+				FBED006B2BEF4537005A029D /* Assets */,
+				FBED00742BEF4537005A029D /* Classes */,
+			);
+			name = XGCScan;
+			path = ../../XGCScan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +343,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				FBED00762BEF4537005A029D /* XGCScan.xcassets in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -324,14 +389,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-XGCScan_Example/Pods-XGCScan_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework",
-				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
-				"${BUILT_PRODUCTS_DIR}/M13OrderedDictionary/M13OrderedDictionary.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/XGCMain/XGCMain.framework",
@@ -339,14 +396,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AliyunOSSiOS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13OrderedDictionary.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XGCMain.framework",
@@ -386,9 +435,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB5015222BD8E885001034DD /* XGCSceneDelegate.m in Sources */,
+				FBED00792BEF4537005A029D /* XGCScanViewController.m in Sources */,
 				6003F59E195388D20070C39A /* XGCAppDelegate.m in Sources */,
+				FBED00782BEF4537005A029D /* XGCScanInfosViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* XGCViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				FBED00772BEF4537005A029D /* XGCScanRoute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,7 +557,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

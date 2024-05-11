@@ -1,6 +1,7 @@
 use_frameworks!
 inhibit_all_warnings!
-
+source 'https://github.com/ShannonCrazy/XGCMainSpecs.git'
+source 'https://cdn.cocoapods.org/'
 
 platform :ios, '12.0'
 

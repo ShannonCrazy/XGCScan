@@ -100,6 +100,9 @@ CG_INLINE NSString *NSStringValue (NSObject *object) {
 /// 是否是纯压缩包文件
 - (BOOL)isArchiveFormat;
 
+/// 是否是视频文件
+- (BOOL)isVideoFormat;
+
 #pragma mark NSCharacterSet
 - (NSString *)removeWhitespace;
 @end

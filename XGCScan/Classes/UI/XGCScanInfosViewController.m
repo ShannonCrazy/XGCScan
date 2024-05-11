@@ -7,7 +7,8 @@
 
 #import "XGCScanInfosViewController.h"
 // XGCMain
-#import "NSDate+XGCDate.h"
+#import <XGCMain/NSDate+XGCDate.h>
+#import <XGCMain/XGCConfiguration.h>
 // thirdparty
 #import <Masonry/Masonry.h>
 
@@ -41,9 +42,9 @@
         UILabel *title = ({
             UILabel *label = [[UILabel alloc] init];
             label.text = @"发票信息";
+            label.textColor = XGCCMI.labelColor;
             label.font = [UIFont systemFontOfSize:19];
             label.textAlignment = NSTextAlignmentCenter;
-            label.textColor = [UIColor colorNamed:@"222222"];
             [containerView addSubview:label];
             [label mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.right.top.mas_equalTo(containerView);
@@ -53,9 +54,9 @@
         UILabel *message = ({
             UILabel *label = [[UILabel alloc] init];
             label.numberOfLines = 0;
+            label.textColor = XGCCMI.labelColor;
             label.font = [UIFont systemFontOfSize:17];
             label.textAlignment = NSTextAlignmentCenter;
-            label.textColor = [UIColor colorNamed:@"222222"];
             label.text = @"以下信息仅为发票二维码所含信息，并不代表查验发票真伪的结果";
             [containerView addSubview:label];
             [label mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,8 +80,8 @@
             UILabel *desc = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = @"发票代码";
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.mas_equalTo(containerView);
@@ -91,8 +92,8 @@
             UILabel *fpdm = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = temps[2];
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.mas_equalTo(desc);
@@ -106,8 +107,8 @@
             UILabel *desc = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = @"发票号码";
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.mas_equalTo(containerView);
@@ -118,8 +119,8 @@
             UILabel *fphm = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = temps[3];
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.mas_equalTo(desc);
@@ -133,8 +134,8 @@
             UILabel *desc = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = @"合计金额";
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.mas_equalTo(containerView);
@@ -145,8 +146,8 @@
             UILabel *hjje = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = temps[4];
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.mas_equalTo(desc);
@@ -160,8 +161,8 @@
             UILabel *desc = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = @"开票日期";
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.mas_equalTo(containerView);
@@ -171,9 +172,9 @@
             });
             UILabel *kprq = ({
                 UILabel *label = [[UILabel alloc] init];
-                label.text = [[NSDate dateFromString:temps[5] dateFormat:@"yyyyMMdd"] stringFromDateFormat:@"yyyy-MM-dd"];
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
+                label.text = [[NSDate dateFromString:temps[5] dateFormat:@"yyyyMMdd"] stringFromDateFormat:@"yyyy-MM-dd"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.mas_equalTo(desc);
@@ -187,8 +188,8 @@
             UILabel *desc = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = @"发票校验码";
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.left.mas_equalTo(containerView);
@@ -199,8 +200,8 @@
             UILabel *fpjym = ({
                 UILabel *label = [[UILabel alloc] init];
                 label.text = temps[6];
+                label.textColor = XGCCMI.labelColor;
                 label.font = [UIFont systemFontOfSize:13];
-                label.textColor = [UIColor colorNamed:@"222222"];
                 [containerView addSubview:label];
                 [label mas_makeConstraints:^(MASConstraintMaker *make) {
                     make.top.mas_equalTo(desc);
@@ -228,11 +229,11 @@
             textView.scrollEnabled = NO;
             textView.text = self.stringValue;
             textView.layer.cornerRadius = 4.0;
+            textView.textColor = XGCCMI.labelColor;
             textView.font = [UIFont systemFontOfSize:13];
             textView.textAlignment = NSTextAlignmentCenter;
             textView.textContainer.lineFragmentPadding = 0;
-            textView.textColor = [UIColor colorNamed:@"222222"];
-            textView.backgroundColor = [UIColor colorNamed:@"F2F1F6"];
+            textView.backgroundColor = XGCCMI.backgroundColor;
             textView.textContainerInset = UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0);
             [textView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
             [containerScrollView addSubview:textView];

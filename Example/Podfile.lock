@@ -1,81 +1,56 @@
 PODS:
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
-  - AliyunOSSiOS (2.10.20)
-  - DZNEmptyDataSet (1.8.1)
-  - M13OrderedDictionary (1.1.0)
-  - Masonry (1.1.0)
-  - MJExtension (3.4.2)
-  - MJRefresh (3.7.9)
-  - SDWebImage (5.19.1):
-    - SDWebImage/Core (= 5.19.1)
-  - SDWebImage/Core (5.19.1)
   - SVProgressHUD (2.3.1):
     - SVProgressHUD/Core (= 2.3.1)
   - SVProgressHUD/Core (2.3.1)
   - Toast (4.1.1)
-  - XGCMain (1.0.1):
-    - AFNetworking
-    - AliyunOSSiOS
-    - DZNEmptyDataSet
-    - M13OrderedDictionary
-    - Masonry
-    - MJExtension
-    - MJRefresh
-    - SDWebImage
+  - XGCMain/XGCCategory (1.0.7):
     - SVProgressHUD
     - Toast
-  - XGCScan (1.0.0):
-    - XGCMain
+  - XGCMain/XGCMainBase (1.0.7):
+    - SVProgressHUD
+    - Toast
+    - XGCMain/XGCThemeManager
+  - XGCMain/XGCMainRoute (1.0.7):
+    - SVProgressHUD
+    - Toast
+  - XGCMain/XGCThemeManager (1.0.7):
+    - SVProgressHUD
+    - Toast
+    - XGCMain/XGCCategory
+  - XGCMain/XGCURLManagerCenter (1.0.7):
+    - SVProgressHUD
+    - Toast
+  - XGCMain/XGCWebView (1.0.7):
+    - SVProgressHUD
+    - Toast
+    - XGCMain/XGCMainBase
+    - XGCMain/XGCMainRoute
+    - XGCMain/XGCURLManagerCenter
+  - XGCScan (1.0.1):
+    - XGCMain/XGCMainBase
+    - XGCMain/XGCThemeManager
+    - XGCMain/XGCWebView
 
 DEPENDENCIES:
   - XGCScan (from `../`)
 
 SPEC REPOS:
+  https://github.com/ShannonCrazy/XGCMainSpecs.git:
+    - XGCMain
   trunk:
-    - AFNetworking
-    - AliyunOSSiOS
-    - DZNEmptyDataSet
-    - M13OrderedDictionary
-    - Masonry
-    - MJExtension
-    - MJRefresh
-    - SDWebImage
     - SVProgressHUD
     - Toast
-    - XGCMain
 
 EXTERNAL SOURCES:
   XGCScan:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  AliyunOSSiOS: a30fde72d3058386055ef8a4a5411e6978b9de6d
-  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  M13OrderedDictionary: 6e157fe9c82aa6b3cd7198f5c5c30c7a6834c4a6
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: e97d164cb411aa9795cf576093a1fa208b4a8dd8
-  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
-  SDWebImage: 40b0b4053e36c660a764958bff99eed16610acbb
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
-  XGCMain: cdb3a7bd23674249c85977c408b176e1ae65478c
-  XGCScan: ff969e7fdb1065a869b22f4e077ff38451e6ecf9
+  XGCMain: 5a097dd90e937e48883de68cf64a7d54d4c87bcf
+  XGCScan: fa2ef2d22cf3cb78e08051664ab73a391bb2a313
 
-PODFILE CHECKSUM: 5379d1c3815a930f51eb8a2d9ace8c666cd0a9ab
+PODFILE CHECKSUM: 96f178d33367d4c8fa2f173357eaa66d805255cf
 
 COCOAPODS: 1.15.2

@@ -7,6 +7,8 @@
 //
 
 #import "XGCViewController.h"
+#import <XGCMain/XGCMainRoute.h>
+#import <XGCScan/XGCScanRoute.h>
 
 @interface XGCViewController ()
 
@@ -18,7 +20,12 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.purpleColor;
+    [XGCMainRoute registerRoute:[XGCScanRoute new]];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [XGCMainRoute routeURL:[NSURL URLWithString:@"xinggc://XGCScan"]];
 }
 
 - (void)didReceiveMemoryWarning

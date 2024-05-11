@@ -8,7 +8,7 @@
 #import "NSArray+XGCArray.h"
 
 @implementation NSArray (XGCArray)
-- (NSArray *)random:(NSUInteger)count {
+- (NSArray *)arc4random:(NSUInteger)count {
     if (count >= self.count) {
         return self;
     }

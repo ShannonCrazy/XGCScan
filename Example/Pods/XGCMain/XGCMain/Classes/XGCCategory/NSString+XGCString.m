@@ -179,6 +179,11 @@
     return [@[@"zip", @"rar"] containsObject:suffix.lowercaseString];
 }
 
+- (BOOL)isVideoFormat {
+    NSString *suffix = self.pathExtension.length > 0 ? self.pathExtension : self;
+    return [@[@"mp4", @"3gp", @"mov", @"m4v", @"wmv", @"asf", @"asx", @"rm", @"rmvb", @"avi", @"mkv", @"flv", @"vob"] containsObject:suffix.lowercaseString];
+}
+
 #pragma mark NSCharacterSet
 - (NSString *)removeWhitespace {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];

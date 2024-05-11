@@ -6,23 +6,17 @@
 //
 
 #import "XGCMainTabBarController.h"
-#import "XGCMainTabBarControllerDelegate.h"
-#import "XGCMainViewController.h"
 //
 #import "XGCConfiguration.h"
 
 @interface XGCMainTabBarController ()<UITabBarDelegate>
-/// 代理者
-@property (nonatomic, strong) XGCMainTabBarControllerDelegate *delegator;
+
 @end
 
 @implementation XGCMainTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.delegator = [[XGCMainTabBarControllerDelegate alloc] init];
-    self.delegator.tabBarController = self;
-    self.delegate = self.delegator;
     // 背景色
     self.tabBar.backgroundColor = UIColor.whiteColor;
     self.tabBar.translucent = YES;
