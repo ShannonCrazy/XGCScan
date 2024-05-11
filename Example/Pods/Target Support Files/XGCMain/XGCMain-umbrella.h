@@ -30,6 +30,11 @@
 #import "XGCURLManager.h"
 #import "XGCURLManagerCenter.h"
 #import "XGCURLProtocol.h"
+#import "UIControl+XGCControl.h"
+#import "UIView+XGCView.h"
+#import "XGCActivityIndicatorView.h"
+#import "XGCViewConfiguration.h"
+#import "XGCViewLayer.h"
 #import "XGCWebViewController.h"
 #import "XGCWebViewRoute.h"
 

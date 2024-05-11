@@ -39,4 +39,7 @@ Pod::Spec.new do |s|
     s.dependency 'XGCMain/XGCWebView'
     s.dependency 'XGCMain/XGCMainBase'
     s.dependency 'XGCMain/XGCThemeManager'
+    s.dependency 'XGCMain/XGCViewConfiguration'
+    
+    s.dependency 'Masonry'
 end

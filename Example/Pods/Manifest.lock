@@ -1,4 +1,5 @@
 PODS:
+  - Masonry (1.1.0)
   - SVProgressHUD (2.3.1):
     - SVProgressHUD/Core (= 2.3.1)
   - SVProgressHUD/Core (2.3.1)
@@ -20,15 +21,20 @@ PODS:
   - XGCMain/XGCURLManagerCenter (1.0.7):
     - SVProgressHUD
     - Toast
+  - XGCMain/XGCViewConfiguration (1.0.7):
+    - SVProgressHUD
+    - Toast
   - XGCMain/XGCWebView (1.0.7):
     - SVProgressHUD
     - Toast
     - XGCMain/XGCMainBase
     - XGCMain/XGCMainRoute
     - XGCMain/XGCURLManagerCenter
-  - XGCScan (1.0.1):
+  - XGCScan (1.0.2):
+    - Masonry
     - XGCMain/XGCMainBase
     - XGCMain/XGCThemeManager
+    - XGCMain/XGCViewConfiguration
     - XGCMain/XGCWebView
 
 DEPENDENCIES:
@@ -38,6 +44,7 @@ SPEC REPOS:
   https://github.com/ShannonCrazy/XGCMainSpecs.git:
     - XGCMain
   trunk:
+    - Masonry
     - SVProgressHUD
     - Toast
 
@@ -46,10 +53,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
   XGCMain: 5a097dd90e937e48883de68cf64a7d54d4c87bcf
-  XGCScan: fa2ef2d22cf3cb78e08051664ab73a391bb2a313
+  XGCScan: 90fb570808d63d2575d9f2f9d82bc973d65ea5b4
 
 PODFILE CHECKSUM: 96f178d33367d4c8fa2f173357eaa66d805255cf
 
